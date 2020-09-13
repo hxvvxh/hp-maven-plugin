@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="plugin" />
-        <module name="hp-maven-plugin" />
+        <module name="hp-Hello-maven-plugin" />
       </profile>
     </annotationProcessing>
   </component>

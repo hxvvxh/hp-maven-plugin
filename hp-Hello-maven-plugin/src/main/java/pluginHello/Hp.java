@@ -1,4 +1,4 @@
-package com.hp.plugin;
+package pluginHello;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
