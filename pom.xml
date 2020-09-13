@@ -10,6 +10,7 @@
     <modules>
         <module>hp-Hello-maven-plugin</module>
         <module>hp-message</module>
+        <module>hp-message-maven-plugin</module>
     </modules>
 
     <packaging>pom</packaging>
