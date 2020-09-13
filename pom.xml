@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>hp-Hello-maven-plugin</module>
+        <module>hp-message</module>
     </modules>
 
     <packaging>pom</packaging>

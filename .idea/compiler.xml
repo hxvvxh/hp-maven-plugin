@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="plugin" />
         <module name="hp-Hello-maven-plugin" />
+        <module name="hp-message" />
       </profile>
     </annotationProcessing>
   </component>
