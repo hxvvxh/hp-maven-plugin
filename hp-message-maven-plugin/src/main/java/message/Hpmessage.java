@@ -1,6 +1,7 @@
 package message;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.base.Splitter;
 import message.dto.MessageDto;
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
@@ -18,6 +19,8 @@ import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,12 +50,13 @@ public class Hpmessage extends AbstractMojo {
             getLog().info("try to github api with url:" + url + "\\n" + " token:" + token);
             //http调用，转换成JSON 获取content信息 转换成map
             MessageDto dto=get(url);
-
+            Map<String,String> map=caseContentToMap(dto.getContent());
+            getLog().info("cast message toMap:" + map);
             //调用springboot 国际化信息转换LocaleResolver
         }
     }
 
-    public MessageDto get(String url) {
+    private MessageDto get(String url) {
         // 获得Http客户端(可以理解为:你得先有一个浏览器;注意:实际上HttpClient与浏览器是不一样的)
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
         // 创建Get请求
@@ -111,5 +115,17 @@ public class Hpmessage extends AbstractMojo {
             }
         }
         return null;
+    }
+    private Map<String,String> caseContentToMap(String content){
+        Base64.Decoder base64 = Base64.getDecoder();
+        Map<String,String> map=new HashMap<>();
+        try {
+            String s=content.replaceAll("\r|\n","");
+            String str = new String(base64.decode(s), "UTF-8");
+            map= Splitter.on("\n").withKeyValueSeparator("=").split(str);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return map;
     }
 }
