@@ -32,6 +32,8 @@ import java.util.Map;
 @Mojo(name = "Message")
 public class Hpmessage extends AbstractMojo {
 
+    public static ThreadLocal<Map<String,String>> message= ThreadLocal.withInitial(HashMap::new);
+
     private Map<String, String> enToCn = new HashMap<>();
 
     @Parameter(property = "Message.token")
@@ -51,7 +53,8 @@ public class Hpmessage extends AbstractMojo {
             //http调用，转换成JSON 获取content信息 转换成map
             MessageDto dto=get(url);
             Map<String,String> map=caseContentToMap(dto.getContent());
-            getLog().info("cast message toMap:" + map);
+            message.set(map);
+            getLog().info("cast message toMap:" + message.get());
             //调用springboot 国际化信息转换LocaleResolver
         }
     }
