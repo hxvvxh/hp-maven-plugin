@@ -3,6 +3,8 @@ package message;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Splitter;
 import message.dto.MessageDto;
+import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
+import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
@@ -17,22 +19,57 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import org.springframework.util.AntPathMatcher;
+import org.springframework.util.StreamUtils;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.Base64;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.zip.GZIPInputStream;
 
 /**
  * @author hp
  * @version 1.0
  * @date 2020/9/13 21:10
+ *
+ *@Mojo( name = "<goal-name>",
+ *        aggregator = <false|true>,
+ *        configurator = "<role hint>",
+ *        // 执行策略
+ *        executionStrategy = "<once-per-session|always>",
+ *        inheritByDefault = <true|false>,
+ *        // 实例化策略
+ *        instantiationStrategy = InstantiationStrategy.<strategy>,
+ *        // 如果用户没有在POM中明确设置此Mojo绑定到的phase，那么绑定一个MojoExecution到那个phase
+ *        defaultPhase = LifecyclePhase.<phase>,
+ *        requiresDependencyResolution = ResolutionScope.<scope>,
+ *        requiresDependencyCollection = ResolutionScope.<scope>,
+ *        // 提示此Mojo需要被直接调用（而非绑定到生命周期阶段）
+ *        requiresDirectInvocation = <false|true>,
+ *        // 提示此Mojo不能在离线模式下运行
+ *        requiresOnline = <false|true>,
+ *        // 提示此Mojo必须在一个Maven项目内运行
+ *        requiresProject = <true|false>,
+ *        // 提示此Mojo是否线程安全，线程安全的Mojo支持在并行构建中被并发的调用
+ *        threadSafe = <false|true> ) // (since Maven 3.0)
+ *
+ *
+ *     @Parameter( name = "parameter",
+ *                 // 在POM中可使用别名来配置参数
+ *                 alias = "myAlias",
+ *                 property = "a.property",
+ *                 defaultValue = "an expression, possibly with ${variables}",
+ *                 readonly = <false|true>,
+ *                 required = <false|true> )
  */
 @Mojo(name = "Message")
 public class Hpmessage extends AbstractMojo {
 
-    public static ThreadLocal<Map<String,String>> message= ThreadLocal.withInitial(HashMap::new);
+    private static ThreadLocal<Map<String,String>> message= ThreadLocal.withInitial(HashMap::new);
 
     private Map<String, String> enToCn = new HashMap<>();
 
@@ -41,22 +78,114 @@ public class Hpmessage extends AbstractMojo {
     @Parameter(property = "Message.branch", defaultValue = "master")
     private String branch;
 
+
+    @Parameter(defaultValue = "${project.groupId}")
+    private String groupId;
+
+    @Parameter(defaultValue = "${project.artifactId}")
+    private String artifactId;
+
+    @Parameter(defaultValue = "${project.version}")
+    private String version;
+
+    @Parameter(property = "project.build.outputDirectory")
+    private File outputDirectory;
+
+    private static final AntPathMatcher ANT_PATH_MATCHER = new AntPathMatcher();
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
 
+        StringBuilder sb = new StringBuilder();
+        sb.append("hp")
+                .append(":")
+                .append("groupId:")
+                .append(groupId)
+                .append(" artifactId:")
+                .append(artifactId)
+                .append(" version:")
+                .append(version);
+        this.getLog().info("========================================");
+        this.getLog().info("==============HP Plugin==============");
+        this.getLog().info("========================================");
+        this.getLog().info(sb.toString());
+        String uri=null;
+        String content=null;
         if (null == token) {
             getLog().error("Message token is null please check");
         } else {
             //根据token获取github上的仓库及分支信息
             String url = "https://api.github.com/repos/hxvvxh/hp-maven-plugin/contents/hp-message/CN_EN_message.properties?ref=" + branch;
+            uri=url;
             getLog().info("try to github api with url:" + url + "\\n" + " token:" + token);
             //http调用，转换成JSON 获取content信息 转换成map
-            MessageDto dto=get(url);
-            Map<String,String> map=caseContentToMap(dto.getContent());
+            MessageDto dto = get(url);
+            Map<String, String> map = caseContentToMap(dto.getContent());
+            content=dto.getContent();
             message.set(map);
             getLog().info("cast message toMap:" + message.get());
             //调用springboot 国际化信息转换LocaleResolver
         }
+
+
+        /**
+         * 以下是将github上读取的文件，存放到target中
+         */
+        File f = this.outputDirectory;
+        if (!f.exists() && !f.mkdirs()) {
+            throw new RuntimeException("Cannot create folder " + f);
+        } else {
+            URL url;
+            URLConnection connection;
+            try {
+                url = new URL(uri);
+                connection = url.openConnection();
+                connection.setRequestProperty("Authorization",token);
+                connection.setRequestProperty("Accept","application/vnd.github.v3+json");
+                connection.setDoInput(true);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            TarArchiveInputStream tar;
+            try {
+                InputStream inputStream=connection.getInputStream();
+                GZIPInputStream gzip = new GZIPInputStream(inputStream);
+                tar = new TarArchiveInputStream(gzip);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            try {
+                TarArchiveEntry entry = tar.getNextTarEntry();
+                if (null == entry) {
+                    entry = tar.getNextTarEntry();
+                }
+                for (; null != entry; entry = tar.getNextTarEntry()) {
+                    String name = entry.getName();
+                    boolean cont = false;
+                    Iterator var11;
+                    String include;
+                    if (!cont) {
+                        File target;
+                        if (entry.isDirectory()) {
+                        } else {
+                            if (name.indexOf(47) > -1) {
+                                name = name.substring(name.lastIndexOf(47));
+                            }
+                            target = new File(f, name);
+                            this.getLog().info("Entry " + entry.getName() + " has been extracted to " + target);
+                            StreamUtils.copy(tar, new FileOutputStream(target));
+                        }
+                    } else {
+                        this.getLog().info("included : " + name);
+                    }
+
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 
     private MessageDto get(String url) {
@@ -131,4 +260,5 @@ public class Hpmessage extends AbstractMojo {
         }
         return map;
     }
+
 }

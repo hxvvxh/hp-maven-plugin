@@ -4,6 +4,7 @@
     <list default="true" id="bdccdeae-b45f-4ff4-984a-6d912f7b9581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hp-message-maven-plugin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hp-message-maven-plugin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java" afterDir="false" />
     </list>
@@ -27,19 +28,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1333">
-              <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="108">
+                <caret line="4" column="86" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="86" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -47,63 +42,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+            <state relative-caret-position="810">
+              <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/MessageDto.java">
+        <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3220">
-              <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-              <folding>
-                <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#843#844#0" expanded="true" />
-                <element signature="e#874#875#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-                <element signature="e#1163#1164#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1251#1252#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1361#1362#0" expanded="true" />
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1438#1439#0" expanded="true" />
-                <element signature="e#1473#1474#0" expanded="true" />
-                <element signature="e#1529#1530#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-                <element signature="e#1608#1609#0" expanded="true" />
-                <element signature="e#1635#1636#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
-                <element signature="e#1707#1708#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
-                <element signature="e#1817#1818#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1890#1891#0" expanded="true" />
-                <element signature="e#1921#1922#0" expanded="true" />
-                <element signature="e#1969#1970#0" expanded="true" />
-                <element signature="e#2009#2010#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="959">
+              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -123,6 +75,12 @@
       <find>JSONParser</find>
       <find>getLog</find>
       <find>static</find>
+      <find>gzip</find>
+      <find>StreamUtils</find>
+      <find>TarArchiveEntry</find>
+      <find>token</find>
+      <find>tar</find>
+      <find>catch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -135,7 +93,6 @@
         <option value="$PROJECT_DIR$/hp-Hello-maven-plugin/src/main/java/plugin2/Hp.java" />
         <option value="$PROJECT_DIR$/hp-Hello-maven-plugin/src/main/java/pluginHello/Hp.java" />
         <option value="$PROJECT_DIR$/hp-Hello-maven-plugin/pom.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/hp-Hello-maven-plugin/src/main/java/Hpmessage.java" />
         <option value="$PROJECT_DIR$/hp-Hello-maven-plugin/src/test/java/test.java" />
@@ -143,11 +100,14 @@
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/sda.java" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/MessageDto.java" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/test/java/test.java" />
-        <option value="$PROJECT_DIR$/hp-message/CN_EN_message.properties" />
-        <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/resources/META-INF/spring.factories" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/HpMessage.java" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/auto/HpPluginAutoConfigration.java" />
+        <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/MessageSpringDto.java" />
+        <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/auto/HpAuto.java" />
+        <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/resources/META-INF/spring.factories" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/hp-message/CN_EN_message.properties" />
         <option value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java" />
       </list>
     </option>
@@ -182,10 +142,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1909" />
-    <option name="y" value="-1013" />
-    <option name="width" value="1463" />
-    <option name="height" value="2522" />
+    <option name="x" value="1908" />
+    <option name="y" value="-1014" />
+    <option name="width" value="1464" />
+    <option name="height" value="2523" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -199,6 +159,11 @@
             <path>
               <item name="hp-maven-plugin" type="b2602c69:ProjectViewProjectNode" />
               <item name="hp-maven-plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hp-maven-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hp-maven-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="hp-message" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hp-maven-plugin" type="b2602c69:ProjectViewProjectNode" />
@@ -257,13 +222,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hp-message-maven-plugin/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hp-message/CN_EN_message.properties" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -290,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test (1)">
+  <component name="RunManager" selected="Remote.Unnamed">
     <configuration name="sda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="message.sda" />
       <module name="hp-message-maven-plugin" />
@@ -318,6 +283,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="127.0.0.1" />
+      <option name="PORT" value="8000" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8000" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.sda" />
+      <item itemvalue="Application.test" />
+      <item itemvalue="Application.test (1)" />
+      <item itemvalue="Remote.Unnamed" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.test (1)" />
@@ -343,36 +327,40 @@
       <workItem from="1600088047839" duration="614000" />
       <workItem from="1600090264957" duration="70000" />
       <workItem from="1600264583015" duration="4982000" />
+      <workItem from="1600695438704" duration="5238000" />
+      <workItem from="1600781277839" duration="3981000" />
+      <workItem from="1600868686814" duration="221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15862000" />
+    <option name="totallyTimeSpent" value="25302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-1009" width="975" height="1681" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28462377" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.37186477" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.29825693" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44092962" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.17624274" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32924467" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4331827" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.37766302" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32989025" />
+      <window_info anchor="bottom" id="Spring" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -412,6 +400,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -421,6 +423,12 @@
           <line>16</line>
           <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -432,6 +440,31 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>var13</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>connection</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>gzip</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>connection.getInputStream()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>outputDirectory</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>str</expression-string>
         <language-id>JAVA</language-id>
@@ -449,21 +482,6 @@
       </expression>
       <expression>
         <expression-string>conn.getHeaderFields()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>conn.getResponseMessage()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>conn.getResponseCode()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>conn</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -506,17 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/net/URLConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="586" column="35" lean-forward="true" selection-start-line="586" selection-start-column="11" selection-end-line="586" selection-end-column="35" />
-          <folding>
-            <element signature="e#20814#20815#0" expanded="true" />
-            <element signature="e#20859#20860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/objects/Global.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1176">
@@ -548,16 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="84">
-            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hp-Hello-maven-plugin/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -574,19 +571,6 @@
           <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="140">
-            <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/hp-Hello-maven-plugin/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -622,23 +606,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/sda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message/CN_EN_message.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/sda.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -653,20 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.5.RELEASE/spring-core-5.2.5.RELEASE-sources.jar!/org/springframework/core/Ordered.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.5.RELEASE/spring-core-5.2.5.RELEASE-sources.jar!/org/springframework/core/annotation/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/condition/ConditionalOnBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -674,13 +628,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/resources/META-INF/spring.factories">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/auto/HpPluginAutoConfigration.java" />
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/HpMessage.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -688,37 +637,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/auto/HpPluginAutoConfigration.java">
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Auto.java" />
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/resources/META-INF/spring.factories" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.5.RELEASE/spring-core-5.2.5.RELEASE-sources.jar!/org/springframework/core/annotation/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="1456">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.2.5.RELEASE/spring-core-5.2.5.RELEASE-sources.jar!/org/springframework/core/Ordered.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1333">
-          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+        <state relative-caret-position="1120">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/HpMessage.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.6.RELEASE/spring-boot-autoconfigure-2.2.6.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/condition/ConditionalOnProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2072">
+          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/auto/HpAuto.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/jre/lib/rt.jar!/com/sun/xml/internal/ws/util/StreamUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/MessageSpringDto.java" />
     <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/dto/MessageDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3220">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+        <state relative-caret-position="1652">
+          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
           <folding>
             <element signature="e#490#491#0" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
@@ -768,10 +722,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="135">
+            <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/io/ByteArrayInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2133">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/net/URLConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20599">
+          <caret line="828" column="23" selection-start-line="828" selection-start-column="23" selection-end-line="828" selection-end-column="23" />
+          <folding>
+            <element signature="e#20814#20815#0" expanded="true" />
+            <element signature="e#20859#20860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.5/commons-compress-1.5.jar!/org/apache/commons/compress/archivers/tar/TarArchiveInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1809">
+          <caret line="91" column="26" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/util/zip/GZIPInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1647">
+          <caret line="89" column="11" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message/CN_EN_message.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="108">
+            <caret line="4" column="86" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="86" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hp-message-maven-plugin/src/main/java/message/Hpmessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="810">
+          <caret line="176" column="41" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
