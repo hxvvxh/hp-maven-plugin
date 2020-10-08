@@ -250,7 +250,7 @@ public class Hpmessage extends AbstractMojo {
             String s=content.replaceAll("\r|\n","");
             String str = new String(base64.decode(s), "UTF-8");
             if (str.endsWith("\n")){
-                str=str.substring(str.length()-2);
+                str=str.substring(0,str.length()-2);
             }
             map= Splitter.on("\n").withKeyValueSeparator("=").split(str);
         } catch (UnsupportedEncodingException e) {
