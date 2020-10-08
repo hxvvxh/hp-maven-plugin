@@ -17,6 +17,9 @@ public class test {
             String s="aHAudGVzdD3mtYvor5UsCmhwLnRlc3QyPea1i+ivlTI=\n";
             s=s.replaceAll("\r|\n","");
             String str = new String(base64.decode(s), "UTF-8");
+            if (str.endsWith("\n")){
+                str=str.substring(str.length()-2);
+            }
             Map<String,String> map=Splitter.on("\n").withKeyValueSeparator("=").split(str);
             System.out.println(str);
             System.out.println(map);
