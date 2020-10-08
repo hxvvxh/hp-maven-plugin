@@ -3,8 +3,6 @@ package message;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Splitter;
 import message.dto.MessageDto;
-import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
-import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
@@ -20,16 +18,13 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.springframework.util.AntPathMatcher;
-import org.springframework.util.StreamUtils;
 
-import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.zip.GZIPInputStream;
 
 /**
  * @author hp
@@ -127,64 +122,64 @@ public class Hpmessage extends AbstractMojo {
         }
 
 
-        /**
-         * 以下是将github上读取的文件，存放到target中
-         */
-        File f = this.outputDirectory;
-        if (!f.exists() && !f.mkdirs()) {
-            throw new RuntimeException("Cannot create folder " + f);
-        } else {
-            URL url;
-            URLConnection connection;
-            try {
-                url = new URL(uri);
-                connection = url.openConnection();
-                connection.setRequestProperty("Authorization",token);
-                connection.setRequestProperty("Accept","application/vnd.github.v3+json");
-                connection.setDoInput(true);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            TarArchiveInputStream tar;
-            try {
-                InputStream inputStream=connection.getInputStream();
-                GZIPInputStream gzip = new GZIPInputStream(inputStream);
-                tar = new TarArchiveInputStream(gzip);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            try {
-                TarArchiveEntry entry = tar.getNextTarEntry();
-                if (null == entry) {
-                    entry = tar.getNextTarEntry();
-                }
-                for (; null != entry; entry = tar.getNextTarEntry()) {
-                    String name = entry.getName();
-                    boolean cont = false;
-                    Iterator var11;
-                    String include;
-                    if (!cont) {
-                        File target;
-                        if (entry.isDirectory()) {
-                        } else {
-                            if (name.indexOf(47) > -1) {
-                                name = name.substring(name.lastIndexOf(47));
-                            }
-                            target = new File(f, name);
-                            this.getLog().info("Entry " + entry.getName() + " has been extracted to " + target);
-                            StreamUtils.copy(tar, new FileOutputStream(target));
-                        }
-                    } else {
-                        this.getLog().info("included : " + name);
-                    }
-
-                }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }
+//        /**
+//         * 以下是将github上读取的文件，存放到target中
+//         */
+//        File f = this.outputDirectory;
+//        if (!f.exists() && !f.mkdirs()) {
+//            throw new RuntimeException("Cannot create folder " + f);
+//        } else {
+//            URL url;
+//            URLConnection connection;
+//            try {
+//                url = new URL(uri);
+//                connection = url.openConnection();
+//                connection.setRequestProperty("Authorization",token);
+//                connection.setRequestProperty("Accept","application/vnd.github.v3+json");
+//                connection.setDoInput(true);
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//
+//            TarArchiveInputStream tar;
+//            try {
+//                InputStream inputStream=connection.getInputStream();
+//                GZIPInputStream gzip = new GZIPInputStream(inputStream);
+//                tar = new TarArchiveInputStream(gzip);
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//
+//            try {
+//                TarArchiveEntry entry = tar.getNextTarEntry();
+//                if (null == entry) {
+//                    entry = tar.getNextTarEntry();
+//                }
+//                for (; null != entry; entry = tar.getNextTarEntry()) {
+//                    String name = entry.getName();
+//                    boolean cont = false;
+//                    Iterator var11;
+//                    String include;
+//                    if (!cont) {
+//                        File target;
+//                        if (entry.isDirectory()) {
+//                        } else {
+//                            if (name.indexOf(47) > -1) {
+//                                name = name.substring(name.lastIndexOf(47));
+//                            }
+//                            target = new File(f, name);
+//                            this.getLog().info("Entry " + entry.getName() + " has been extracted to " + target);
+//                            StreamUtils.copy(tar, new FileOutputStream(target));
+//                        }
+//                    } else {
+//                        this.getLog().info("included : " + name);
+//                    }
+//
+//                }
+//            } catch (Exception e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
 
     }
 
